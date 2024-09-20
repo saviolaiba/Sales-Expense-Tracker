@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales and Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar with buttons -->
+        <div class="sidebar">
+            <button onclick="showSection('inventory')">Inventory Management</button>
+            <button onclick="showSection('sales')">Record Sales</button>
+            <button>Record Expense</button>
+            <button>Calculate Profit</button>
+            <button>User Management</button>
+            <button>Logout</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <!-- Inventory Management Section -->
+            <div id="inventory-section" class="section">
+                <h2>Inventory Management</h2>
+
+                <!-- Form with labels beside input boxes -->
+                <form>
+                    <div class="form-group">
+                        <label for="item-name">Item Name:</label>
+                        <input type="text" id="item-name" placeholder="Enter item name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-quantity">Quantity:</label>
+                        <input type="number" id="item-quantity" placeholder="Enter quantity" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="item-price">Unit Price:</label>
+                        <input type="number" id="item-price" placeholder="Enter unit price" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date-added">Date Added:</label>
+                        <input type="date" id="date-added">
+                    </div>
+
+                    <!-- Button group in column format -->
+                    <div class="button-group column">
+                        <button type="button" onclick="addItem()">Add Item</button>
+                        <button type="button" onclick="updateItem()">Update Item</button>
+                        <button type="button" onclick="removeItem()">Remove Item</button>
+                        <button type="button" onclick="viewInventory()">View Inventory</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Record Sales Section -->
+            <div id="sales-section" class="section" style="display:none;">
+                <h2>Record Sales</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="sale-date">Date:</label>
+                        <input type="date" id="sale-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-name">Customer Name:</label>
+                        <input type="text" id="customer-name" placeholder="Enter customer name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sale-item">Select Item:</label>
+                        <select id="sale-item">
+                            <!-- Items will be populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sale-quantity">Quantity Sold:</label>
+                        <input type="number" id="sale-quantity" placeholder="Enter quantity sold" required>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" onclick="addItemToSale()">Add Item</button>
+                        <button type="button" onclick="completeSale()">Complete Sale</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

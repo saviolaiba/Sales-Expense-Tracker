@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(174, 173, 173);
+    color:#0056b3;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Group Styling - Aligning label and input boxes beside each other */
+.form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 150px; /* Fixed width for label */
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 250px; /* Shortened input field width */
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Button Group in Column Layout */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Specific for column layout in the inventory management section */
+.button-group.column {
+    flex-direction: column;
+}
+
+.button-group button {
+    padding: 10px 15px;
+    background-color:rgb(174, 173, 173);
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+    color: white;
+}
